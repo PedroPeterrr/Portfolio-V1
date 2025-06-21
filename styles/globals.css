@@ -12,9 +12,9 @@
     --color-text: #000;
     --font-inter: 'Inter', sans-serif;
 
-    --breakpoint-sm: "375px";
-    --breakpoint-md: "768px";
-    --breakpoint-lg: "1024px";
+    --breakpoint-sm: 375px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 1440px;
 }
 
 * {
@@ -29,11 +29,11 @@ body {
 }
 
 .parent-container {
-    @apply m-5 flex flex-col gap-[15px];
+    @apply m-5 flex flex-col gap-[15px] lg:flex-row lg:gap-[30px] ;
 }
 
 .contact-content-card {
-    @apply  bg-secondary border-2 border-border rounded-[25px] p-3.5 h-[112px] ;
+    @apply  bg-secondary border-2 border-border rounded-[25px] p-3.5 h-[112px] lg:h-[671px] lg:w-[274px] ;
 }
 
 .name {
@@ -45,7 +45,7 @@ body {
 }
 
 .main-content-card{
-    @apply bg-secondary border-2 border-border rounded-[25px] h-full p-3.5;
+    @apply bg-secondary border-2 border-border rounded-[25px] h-full p-3.5 lg:h-[671px] lg:w-[896px];
 }
 
 .about-me-content p {
