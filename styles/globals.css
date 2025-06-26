@@ -28,12 +28,12 @@ body {
     font-family: var(--font-inter);
 }
 
-.parent-container {
-    @apply m-5 flex flex-col gap-[15px] lg:flex-row lg:gap-[30px] ;
+.main-container {
+    @apply  m-5 lg:items-center lg:justify-center min-h-screen flex flex-col gap-[15px] lg:flex-row lg:gap-[30px] lg:m-0 ;
 }
 
 .contact-content-card {
-    @apply  bg-secondary border-2 border-border rounded-[25px] p-3.5 h-[112px] lg:h-[671px] lg:w-[274px] ;
+    @apply  bg-secondary border-2 border-border rounded-[25px] p-6 lg:h-[671px] lg:w-[274px] flex flex-col lg:pt-15 lg:pb-10;
 }
 
 .name {
@@ -41,7 +41,7 @@ body {
 }
 
 .title{
-    @apply  bg-border max-w-max text-xs rounded-lg font-bold p-1.5 px-2;
+    @apply  bg-border max-w-max text-xs rounded-lg font-bold p-1.5 px-2 lg:mx-auto;
 }
 
 .main-content-card{
@@ -53,4 +53,26 @@ body {
 }
 .about-me-content{
     @apply text-sm font-light
+}
+
+.arrow-container {
+    @apply  top-5 right-5 absolute  bg-secondary border-2 border-border 
+    rounded-tr-[25px] rounded-bl-[25px] p-4 flex items-center justify-center
+    max-w-max  lg:hidden;
+}
+
+.separator{
+    @apply  w-full h-[1px] bg-border my-5 ;
+}
+
+.contact-info-list {
+    @apply  flex flex-col gap-3;
+}
+
+.contact-info-icons {
+    @apply  flex flex-row items-center gap-2 justify-center;
+}
+
+.icons {
+    @apply  w-10 opacity-80 hover:opacity-100 transition-opacity duration-300;
 }

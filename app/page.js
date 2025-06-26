@@ -8,10 +8,8 @@ import {
 export default function Home() {
   return (
     <main className='main-container'>
-      <h1 className="parent-container">
         <ContactInfo />
         <MainContent />
-      </h1>
     </main>
   );
 }
