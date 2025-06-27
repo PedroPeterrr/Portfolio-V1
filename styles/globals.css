@@ -29,11 +29,19 @@ body {
 }
 
 .main-container {
-    @apply  m-5 lg:items-center lg:justify-center min-h-screen flex flex-col gap-[15px] lg:flex-row lg:gap-[30px] lg:m-0 ;
+    @apply  m-5 min-h-screen flex flex-col gap-4
+    lg:items-center lg:justify-center lg:flex-row lg:gap-8 lg:m-0 
+    md:p-18 ;
+}
+
+.title-header {
+    @apply  text-2xl font-bold mb-5;
 }
 
 .contact-content-card {
-    @apply  bg-secondary border-2 border-border rounded-[25px] p-6 lg:h-[671px] lg:w-[274px] flex flex-col lg:pt-15 lg:pb-10;
+    @apply  flex flex-col p-6 relative
+    bg-secondary border-2 border-border rounded-[25px] 
+    lg:h-[671px] lg:w-[274px] lg:pt-15 lg:pb-10;
 }
 
 .name {
@@ -45,7 +53,8 @@ body {
 }
 
 .main-content-card{
-    @apply bg-secondary border-2 border-border rounded-[25px] h-full p-3.5 lg:h-[671px] lg:w-[896px];
+    @apply bg-secondary border-2 border-border rounded-[25px] h-full p-9 lg:h-[671px] lg:w-[896px] 
+    relative;
 }
 
 .about-me-content p {
@@ -56,8 +65,8 @@ body {
 }
 
 .arrow-container {
-    @apply  top-5 right-5 absolute  bg-secondary border-2 border-border 
-    rounded-tr-[25px] rounded-bl-[25px] p-4 flex items-center justify-center
+    @apply top-0 right-0 absolute bottom-auto border-2 border-border 
+    rounded-tr-[25px] rounded-bl-[25px] p-4 flex ml-auto
     max-w-max  lg:hidden;
 }
 
@@ -75,4 +84,20 @@ body {
 
 .icons {
     @apply  w-10 opacity-80 hover:opacity-100 transition-opacity duration-300;
+}
+
+.menu-bar-container {
+    @apply      
+    border-border border-2 bg-white 
+    w-full fixed bottom-0 left-0 
+    rounded-t-[25px]
+
+    md:absolute md:top-0 md:right-0
+    md:bottom-auto md:w-max 
+    md:rounded-bl-[25px] md:rounded-tr-[25px] md:rounded-none
+    md:bg-border md:ml-auto md:mt-0;
+}
+
+.menu-list{
+    @apply flex gap-5 justify-center font-bold py-5 md:px-10 md:gap-15;
 }

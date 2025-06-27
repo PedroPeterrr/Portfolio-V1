@@ -2,12 +2,16 @@ import '../styles/globals.css';
 import { ReactIcon } from '@/assets/assets';
 import Image from 'next/image';
 import React from 'react';
+import MenuBar from './MenuBar';
 
 export default function MainContent() {
   return (
     <section className="main-content-card">
+
+        <MenuBar />
+        
       <header>
-        <h2 className='text-xl font-bold'>
+        <h2 className='title-header'>
           About Me
         </h2>
       </header>
