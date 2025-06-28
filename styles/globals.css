@@ -35,7 +35,8 @@ body {
 }
 
 .title-header {
-    @apply  text-2xl font-bold mb-5;
+    @apply  text-2xl font-bold mb-5
+    lg:text-[32px];
 }
 
 .contact-content-card {
@@ -53,7 +54,7 @@ body {
 }
 
 .main-content-card{
-    @apply bg-secondary border-2 border-border rounded-[25px] h-full p-9 lg:h-[671px] lg:w-[896px] 
+    @apply bg-secondary border-2 border-border rounded-[25px] h-full p-8 lg:h-[671px] lg:w-[896px] 
     relative;
 }
 
@@ -65,9 +66,10 @@ body {
 }
 
 .arrow-container {
-    @apply top-0 right-0 absolute bottom-auto border-2 border-border 
+    @apply top-[-2px] right-[-1px] absolute border-2 border-border 
     rounded-tr-[25px] rounded-bl-[25px] p-4 flex ml-auto
-    max-w-max  lg:hidden;
+    max-w-max  lg:hidden
+    md:top-[-1px];
 }
 
 .separator{
@@ -92,7 +94,7 @@ body {
     w-full fixed bottom-0 left-0 
     rounded-t-[25px]
 
-    md:absolute md:top-0 md:right-0
+    md:absolute md:top-[-1px] md:right-[-1px]
     md:bottom-auto md:w-max 
     md:rounded-bl-[25px] md:rounded-tr-[25px] md:rounded-none
     md:bg-border md:ml-auto md:mt-0;
@@ -100,4 +102,12 @@ body {
 
 .menu-list{
     @apply flex gap-5 justify-center font-bold py-5 md:px-10 md:gap-15;
+}
+
+.menu-item{
+    @apply text-xs text-text hover:text-gray-500 transition-colors duration-300;
+}
+
+.menu-item.active {
+    @apply text-icon;
 }

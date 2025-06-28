@@ -1,36 +1,37 @@
-import '../styles/globals.css';
-import { ReactIcon } from '@/assets/assets';
-import Image from 'next/image';
+"use client"
 import React from 'react';
-import MenuBar from './MenuBar';
+import '../styles/globals.css';
+
+import useMenuStore from '../stores/useMenuStore';
+
+import { 
+  MenuBar,
+  About,
+  Project,
+  Resume
+ } from './index.js';
 
 export default function MainContent() {
+
+  const activeTab = useMenuStore((state) => state.activeTab);
+  
+  const renderContent = () => {
+    switch (activeTab) {
+      case 'Projects':
+        return <Project />;
+      case 'Resume':
+        return <Resume />;
+      default:
+        return <About />;
+    }
+  };
+
   return (
+    <>
     <section className="main-content-card">
-
         <MenuBar />
-        
-      <header>
-        <h2 className='title-header'>
-          About Me
-        </h2>
-      </header>
-      <div className='about-me-content'>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-        </p>
-      </div>
-      <div className='skills-section'>
-        <h3 className="text-xl font-bold">
-          Skills
-        </h3>
-        
-        <Image src={ReactIcon} alt="React Icon" className='react-icon' />
-
-      </div>
+        {renderContent()}
     </section>
+    </>
   );
 }
