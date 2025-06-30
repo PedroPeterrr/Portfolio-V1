@@ -36,9 +36,14 @@ body {
 
 .title-header {
     @apply  text-2xl font-bold mb-5
-    lg:text-[32px];
-}
+    lg:text-[32px]
+    relative pb-4
+     
+    after:absolute after:bottom-0 after:left-0 
+    after:w-7 after:h-[3px] after:bg-icon after:rounded-md
 
+    md:after:h-[5px] md:after:w-9;
+}
 .contact-content-card {
     @apply  flex flex-col p-6 relative
     bg-secondary border-2 border-border rounded-[25px] 
@@ -68,8 +73,7 @@ body {
 .arrow-container {
     @apply top-[-2px] right-[-1px] absolute border-2 border-border 
     rounded-tr-[25px] rounded-bl-[25px] p-4 flex ml-auto
-    max-w-max  lg:hidden
-    md:top-[-1px];
+    max-w-max  lg:hidden;
 }
 
 .separator{
