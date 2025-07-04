@@ -1,10 +1,10 @@
-import '../styles/globals.css';
-import Image from 'next/image';
-import { ReactIcon } from '@/assets/assets';
+import '../../styles/globals.css';
+
+import SkillLink from '../Reusabale/SkillLink';
 
 export default function About(){
     return(
-    <section>
+    <section className='about-me-section'>
         <header>
             <h2 className='title-header'>
             About Me
@@ -21,12 +21,21 @@ export default function About(){
         </div>
 
         <div className='skills-section'>
-            <h3 className="text-xl font-bold">
-            Skills
-            </h3>
-            
-            <Image src={ReactIcon} alt="React Icon" className='react-icon' />
 
+            <h3 className="text-xl font-bold lg:text-[30px] ">
+                Skills
+            </h3>
+
+            <div className="skills-icons-container">
+                <SkillLink type="react" />
+                <SkillLink type="next" />
+                <SkillLink type="js" />
+                <SkillLink type="mongodb" />
+                <SkillLink type="swagger" />
+                <SkillLink type="tailwind" />
+                <SkillLink type="postman" />
+                <SkillLink type="node" />
+           </div>
         </div>
     </section>
     )

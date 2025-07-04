@@ -38,22 +38,74 @@ export default function ContactInfo() {
 
        <div className={`${isOpen ? 'block' : 'hidden'} lg:block`}>
           <div className='separator'></div>
+
             <ul className='contact-info-list'>
+
               <li className='contact-info-item'>
-                <Image src={MailIcon} alt="Mail Icon" className='icons' />
+                <div className="icon-border">
+                  <Image src={MailIcon} alt="Mail Icon" className='icons' />
+                </div>
+
+                <div className='contact-info-text'>
+                  <span className="font-semibold text-[var(--color-border)]">Phone:</span>
+                  <p>
+                    <a 
+                      href="https://www.viber.com/en/" 
+                      target='_blank'
+                      rel="noopener noreferrer"
+                    >
+                      +63 917 123 4567
+                    </a>
+                  </p>
+                </div>
               </li>
+
+
               <li className='contact-info-item'>
-                <Image src={PhoneIcon} alt="Phone Icon" className='icons' />
+                <div className="icon-border">
+                  <Image src={PhoneIcon} alt="Phone Icon" className='icons' />
+                </div>
+
+                <div className="contact-info-text">
+                  <span className="font-semibold text-[var(--color-border)]">Email:</span>
+                  <p>
+                    <a 
+                      href="mailto:cabantog.peterjames@gmail.com"
+                      target='_blank'
+                      rel="noopener noreferrer"
+                    >
+                      cabantog.peterjames@gmail.com
+                    </a>
+                  </p>
+                </div>
               </li>
+
               <li className='contact-info-item'>
-                <Image src={LocationIcon} alt="Location Icon" className='icons' />
+                <div className="icon-border">
+                  <Image src={LocationIcon} alt="Location Icon" className='icons' />
+                </div>
+
+               <div className="contact-info-text">
+                  <span className="font-semibold text-[var(--color-border)]">Location:</span>
+                  <p>
+                    <a 
+                      href="https://www.google.com/maps/place/Bulacan,+Philippines"
+                      target='_blank'
+                      rel="noopener noreferrer"
+                    >
+                      Bulacan, Philippines
+                    </a>
+                  </p>
+                </div>
               </li>
+
             </ul>
+
           <div className='separator'></div>
 
           <ul className='contact-info-icons'>
             <ExternalLink href="https://www.linkedin.com/in/peter-james-cabantog">
-              <Image src={LinkedInIcon} alt="LinkedIn Icon" className='icons'/>
+              <Image src={LinkedInIcon} alt="LinkedIn Icon" className='linkedin-icon'/>
             </ExternalLink>
             <ExternalLink href="https://github.com/PedroPeterrr">
               <Image src={GithubIcon} alt="Github Icon" className='icons' />
