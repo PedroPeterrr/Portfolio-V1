@@ -20,7 +20,7 @@
 * {
     box-sizing: border-box;
     margin: 0;
-    padding: 0;
+    padding: 0;;
 }
 
 body {
@@ -44,57 +44,15 @@ body {
 
     md:after:h-[5px] md:after:w-9;
 }
-.contact-content-card {
-    @apply  flex flex-col p-6 relative
-    bg-secondary border-2 border-border rounded-[25px] 
-    lg:h-[671px] lg:w-[274px] lg:pt-15 lg:pb-10;
-}
-
-.name {
-    @apply font-bold text-base max-w-max mb-1;
-}
-
-.title{
-    @apply  bg-border max-w-max text-xs rounded-lg font-bold p-1.5 px-2 lg:mx-auto;
-}
 
 .main-content-card{
     @apply bg-secondary border-2 border-border rounded-[25px] h-full p-8 lg:h-[671px] lg:w-[896px] 
-    relative;
-}
-
-.about-me-content p {
-    @apply mb-[15px];
-}
-.about-me-content{
-    @apply text-sm font-light
-}
-
-.arrow-container {
-    @apply top-[-2px] right-[-1px] absolute border-2 border-border 
-    rounded-tr-[25px] rounded-bl-[25px] p-4 flex ml-auto
-    max-w-max  lg:hidden;
-}
-
-.separator{
-    @apply  w-full h-[1px] bg-border my-5 ;
-}
-
-.contact-info-list {
-    @apply  flex flex-col gap-3;
-}
-
-.contact-info-icons {
-    @apply  flex flex-row items-center gap-2 justify-center;
-}
-
-.icons {
-    @apply  w-10 opacity-80 hover:opacity-100 transition-opacity duration-300;
+    relative mb-15 md:mb-0;
 }
 
 .menu-bar-container {
-    @apply      
-    border-border border-2 bg-white 
+    @apply z-50     
+    border-border border-2 bg-white shadow-sm
     w-full fixed bottom-0 left-0 
     rounded-t-[25px]
 
@@ -105,7 +63,7 @@ body {
 }
 
 .menu-list{
-    @apply flex gap-5 justify-center font-bold py-5 md:px-10 md:gap-15;
+    @apply flex gap-5 justify-center font-bold py-5 md:px-10 md:gap-15 cursor-pointer;
 }
 
 .menu-item{
@@ -114,4 +72,109 @@ body {
 
 .menu-item.active {
     @apply text-icon;
+}
+
+/* Contact Info */
+
+.contact-content-card {
+    @apply  flex flex-col p-6 relative overflow-hidden
+    bg-secondary border-2 border-border rounded-[25px] 
+    lg:h-[671px] lg:w-[274px] lg:pt-15 lg:pb-10;
+}
+
+.arrow-container {
+    @apply top-[-2px] right-[-1px] absolute border-2 border-border shadow-sm
+    rounded-tr-[25px] rounded-bl-[25px] p-4 flex ml-auto cursor-pointer
+    max-w-max  lg:hidden;
+}
+
+.name {
+    @apply font-bold text-[14px] max-w-max mb-1
+    md:text-[17px];
+}
+
+.title{
+    @apply  bg-border max-w-max text-[12px] rounded-lg font-bold p-1 px-2 
+    md:text-[15px] lg:mx-auto;
+}
+
+.separator{
+    @apply  w-full h-[1px] bg-border my-5 ;
+}
+
+.contact-info-list {
+    @apply  flex flex-col gap-3 lg:my-6;
+}
+
+.contact-info-item {
+    @apply flex items-center gap-2 text-sm font-light lg:my-0.5;
+}
+
+.contact-info-text{
+    @apply flex flex-col font-medium flex-1 min-w-0
+    lg:overflow-hidden ;
+}
+
+.contact-info-text p {
+    @apply cursor-pointer;
+}
+
+.icon-border {
+    @apply border border-border rounded-[10px] bg-transparent p-1 mr-2.5 shadow-sm;
+}
+
+.contact-info-icons {
+    @apply  flex flex-row items-center gap-2 lg:justify-center;
+}
+
+.icons {
+    @apply  w-8 opacity-80 hover:opacity-100 transition-opacity duration-300
+    lg:w-10;
+}
+
+.linkedin-icon{ 
+    @apply  w-11.5 opacity-80 hover:opacity-100 transition-opacity duration-300
+    lg:w-14.5;
+}
+
+/* About Me Section */
+
+
+.about-me-content p {
+    @apply mb-[15px];
+}
+.about-me-content{
+    @apply text-sm font-light
+}
+
+.skills-icons-container {
+    @apply flex mt-4 pb-4 space-x-1 overflow-x-auto 
+    lg:grid lg:grid-cols-4 lg:gap-5 lg:overflow-visible lg:space-x-0 lg:mt-9;
+}
+
+.skills-icon {
+    @apply  w-50 lg:h-35 lg:w-40;
+}
+
+
+/* 2) Firefox support */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: 
+    var(--color-primary) 
+    var(--color-secondary);
+}
+
+/* 3) WebKit-based browsers */
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+*::-webkit-scrollbar-track {
+  background: var(--color-primary);
+}
+*::-webkit-scrollbar-thumb {
+  background-color: var(--color-secondary);
+  border-radius: 4px;
+  border: 2px solid var(--color-primary);
 }

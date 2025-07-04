@@ -3,9 +3,9 @@ import MainContent from "./MainContent";
 
 import MenuBar from "./MenuBar";
 
-import About from "./About";
-import Project from "./Project";
-import Resume from "./Resume";
+import About from "./pages/About";
+import Project from "./pages/Project";
+import Resume from "./pages/Resume";
 
 export { 
     ContactInfo, 
