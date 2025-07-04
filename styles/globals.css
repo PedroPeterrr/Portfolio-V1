@@ -46,7 +46,7 @@ body {
 }
 
 .main-content-card{
-    @apply bg-secondary border-2 border-border rounded-[25px] h-full p-8 lg:h-[671px] lg:w-[896px] 
+    @apply bg-secondary border-2 border-border rounded-[25px] h-full pt-8 px-8 pb-7  lg:h-[671px] lg:w-[896px] 
     relative mb-15 md:mb-0;
 }
 
@@ -149,7 +149,8 @@ body {
 
 .skills-icons-container {
     @apply flex mt-4 pb-4 space-x-1 overflow-x-auto 
-    lg:grid lg:grid-cols-4 lg:gap-5 lg:overflow-visible lg:space-x-0 lg:mt-9;
+    lg:grid lg:grid-cols-4 lg:gap-5 lg:justify-items-center
+    lg:overflow-visible lg:space-x-0 lg:mt-9;
 }
 
 .skills-icon {
