@@ -216,7 +216,8 @@ body {
 }
 
 .resume-download-button {
-    @apply border-2 border-border rounded-[12px] w-full p-2.5
+    @apply flex items-center justify-center gap-2
+    border-2 border-border rounded-[12px] w-full p-2.5
     text-icon font-bold text-[16px] 
     shadow-sm
     md:w-max md:px-10

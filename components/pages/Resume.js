@@ -49,16 +49,14 @@ export default function Resume(){
                 </div>
                 
                 <div className='resume-button-container'>
-                    <button className='resume-download-button'>
-                        <a 
-                            href="/Cabantog_Peter_James-Resume.pdf"
-                            download="Peter_James_Cabantog_Resume.pdf"
-                            className='flex items-center justify-center gap-2'
-                        >
-                            <DocumentIcon stroke="var(--color-icon)"/>
-                            <span>Download CV</span>
-                        </a>
-                    </button>
+                    <a 
+                        href="/Cabantog_Peter_James-Resume.pdf"
+                        download="Peter_James_Cabantog_Resume.pdf"
+                        className='resume-download-button'
+                    >
+                        <DocumentIcon stroke="var(--color-icon)"/>
+                        <span>Download CV</span>
+                    </a>
                 </div>
         </section>
     )
