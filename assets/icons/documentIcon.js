@@ -7,7 +7,7 @@ function DocumentIcon({ width = "24", height = "24", color = "#FFF", stroke= "#0
                 strokeLinejoin="round" 
                 strokeWidth="1.5" 
                 d="M8 13h6m-6 4h8M13 3H5v18h14V9m-6-6h1l5 5v1m-6-6v4c0 1 1 2 2 2h4"  
-                fill={color}
+                fill="none"
             />
         </svg>
     );
