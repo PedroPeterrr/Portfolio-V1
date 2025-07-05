@@ -12,9 +12,11 @@
     --color-text: #000;
     --font-inter: 'Inter', sans-serif;
 
-    --breakpoint-sm: 375px;
+    --breakpoint-sm: 320px;
+    --breakpoint-sm-md: 580px;
     --breakpoint-md: 768px;
-    --breakpoint-lg: 1440px;
+    --breakpoint-md-lg: 1024px;
+    --breakpoint-lg: 1250px;
 }
 
 * {
@@ -29,26 +31,34 @@ body {
 }
 
 .main-container {
-    @apply  m-5 min-h-screen flex flex-col gap-4
-    lg:items-center lg:justify-center lg:flex-row lg:gap-8 lg:m-0 
-    md:p-18 ;
+    @apply  flex flex-col gap-4
+    sm:m-5 
+    md:p-18 md:m-0 
+    lg:justify-center lg:flex-row lg:gap-8;
 }
 
 .title-header {
     @apply  text-2xl font-bold mb-5
-    lg:text-[32px]
     relative pb-4
      
     after:absolute after:bottom-0 after:left-0 
     after:w-7 after:h-[3px] after:bg-icon after:rounded-md
 
-    md:after:h-[5px] md:after:w-9;
+    md:after:h-[5px] md:after:w-9
+    lg:text-[32px];
 }
 
 .main-content-card{
-    @apply bg-secondary border-2 border-border rounded-[25px] h-full pt-8 px-8 pb-7  lg:h-[671px] lg:w-[896px] 
+    @apply bg-secondary border-2 border-border rounded-[25px] 
+    pt-8 px-8 pb-7  
+
+    w-full
+    lg:w-[896px] 
+    lg:min-h-[671px]
     relative mb-15 md:mb-0;
 }
+
+/* Menu-bar Section */
 
 .menu-bar-container {
     @apply z-50     
@@ -56,10 +66,10 @@ body {
     w-full fixed bottom-0 left-0 
     rounded-t-[25px]
 
-    md:absolute md:top-[-1px] md:right-[-1px]
-    md:bottom-auto md:w-max 
-    md:rounded-bl-[25px] md:rounded-tr-[25px] md:rounded-none
-    md:bg-border md:ml-auto md:mt-0;
+    md-lg:absolute md-lg:top-[-1px] md-lg:right-[-1px]
+    md-lg:bottom-auto md-lg:w-max 
+    md-lg:rounded-bl-[25px] md-lg:rounded-tr-[25px] md-lg:rounded-none
+    md-lg:bg-border md-lg:ml-auto md-lg:mt-0;
 }
 
 .menu-list{
@@ -67,7 +77,9 @@ body {
 }
 
 .menu-item{
-    @apply text-xs text-text hover:text-gray-500 transition-colors duration-300;
+    @apply text-xs text-text 
+    hover:text-gray-500 transition-colors duration-300
+    lg:text-sm ;
 }
 
 .menu-item.active {
@@ -79,7 +91,8 @@ body {
 .contact-content-card {
     @apply  flex flex-col p-6 relative overflow-hidden
     bg-secondary border-2 border-border rounded-[25px] 
-    lg:h-[671px] lg:w-[274px] lg:pt-15 lg:pb-10;
+    lg:h-[671px] lg:w-[274px] lg:pt-15 lg:pb-10
+    lg:sticky lg:top-18;
 }
 
 .arrow-container {
@@ -90,12 +103,12 @@ body {
 
 .name {
     @apply font-bold text-[14px] max-w-max mb-1
-    md:text-[17px];
+    md:text-[15px];
 }
 
 .title{
     @apply  bg-border max-w-max text-[12px] rounded-lg font-bold p-1 px-2 
-    md:text-[15px] lg:mx-auto;
+    md:text-[13px] lg:mx-auto;
 }
 
 .separator{
@@ -148,14 +161,67 @@ body {
 }
 
 .skills-icons-container {
-    @apply flex mt-4 pb-4 space-x-1 overflow-x-auto 
+    @apply flex mt-4  space-x-1 overflow-x-auto 
     lg:grid lg:grid-cols-4 lg:gap-5 lg:justify-items-center
-    lg:overflow-visible lg:space-x-0 lg:mt-9;
+    lg:overflow-visible lg:space-x-0 lg:mt-6;
 }
 
 .skills-icon {
     @apply  w-50 lg:h-35 lg:w-40;
 }
+
+    /* Project */
+
+.project-list {
+    @apply grid grid-cols-1 gap-4
+    md:grid-cols-2
+    md-lg:grid-cols-3 ;
+}
+
+.project-list-item {
+    @apply flex flex-col relative
+    flex-1 min-w-[255px]
+    cursor-pointer
+}
+
+.project-image-container {
+    @apply relative w-full aspect-video 
+    transform transition duration-200 hover:scale-105
+}
+
+.project-title {
+    @apply mt-3 text-xs font-semibold
+}
+
+    /* Resume */
+
+.resume-details-container{
+    @apply border-2 border-border rounded-[12px] p-5 mb-5
+}
+
+.resume-title {
+    @apply text-[18px] font-bold mb-5
+}
+
+.experience-list {
+    @apply list-disc pl-5 text-[15px] font-light mt-2.5
+}
+
+.experience-list li::marker {
+  @apply text-icon;
+}
+
+.resume-button-container {
+    @apply md:flex md:justify-end items-center;
+}
+
+.resume-download-button {
+    @apply border-2 border-border rounded-[12px] w-full p-2.5
+    text-icon font-bold text-[16px] 
+    shadow-sm
+    md:w-max md:px-10
+}
+
 
 
 /* 2) Firefox support */
@@ -179,3 +245,4 @@ body {
   border-radius: 4px;
   border: 2px solid var(--color-primary);
 }
+

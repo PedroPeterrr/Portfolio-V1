@@ -18,6 +18,10 @@ import PostmanIcon from '../assets/icon/Postman.webp';
 import MongoDBIcon from '../assets/icon/Mongodb.png';
 import Swagger from '../assets/icon/Swagger.webp';
 
+import Pmes from '../assets/image/pmes.png'
+
+import DocumentIcon from './icons/documentIcon.js';
+
 export {
     React,
     ArrowUp,
@@ -33,5 +37,7 @@ export {
     NodeIcon,
     PostmanIcon,
     MongoDBIcon,
-    Swagger
+    Swagger,
+    Pmes,
+    DocumentIcon
 }
