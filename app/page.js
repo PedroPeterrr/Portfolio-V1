@@ -7,7 +7,7 @@ import {
 
 export default function Home() {
   return (
-    <main className='main-container'>
+    <main>
         <ContactInfo />
         <MainContent />
     </main>

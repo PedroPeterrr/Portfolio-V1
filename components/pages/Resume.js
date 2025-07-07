@@ -12,18 +12,18 @@ export default function Resume(){
 
                 <div className='resume-details-container'>
                     <h3 className='resume-title'>Education</h3>
-                    <h4 className='text-[17px] font-bold'>Bulacan State University</h4>
-                    <p className='text-[14px]'>Bachelor of Industrial Technology major in Computer Technology</p>
-                    <span className='text-[14px] text-icon font-bold'>2021 - 2025</span>
+                    <h4 className='text-[17px] font-bold md:text-[18px]'>Bulacan State University</h4>
+                    <p className='text-[14px] md:text-[15px]'>Bachelor of Industrial Technology major in Computer Technology</p>
+                    <span className='text-[14px] text-icon font-bold md:text-[15px]'>2021 - 2025</span>
                 </div>
 
                 <div className='resume-details-container'>
                     <h3 className='resume-title'>Experience</h3>
-                    <h4 className='text-[15px] font-bold'>INTERN | Planning and Development Office</h4>
-                    <p className='text-[15px]'>Bulacan State University</p>
+                    <h4 className='text-[15px] font-bold md:text-[16px]'>INTERN | Planning and Development Office</h4>
+                    <p className='text-[15px] md:text-[16px]'>Bulacan State University</p>
                     <span>
-                        <p className='text-[15px] text-icon font-bold'>January - May 2025 • 4months</p>
-                        <p className='text-[15px]'>Malolos, Bulacan - Philippines</p>
+                        <p className='text-[15px] text-icon font-bold md:text-[16px]'>January - May 2025 • 4months</p>
+                        <p className='text-[15px] md:text-[16px]'>Malolos, Bulacan - Philippines</p>
                         <ul className='experience-list'>
                             <li> 
                                 Migrated and refactored legacy code to a new repository using modern React, enhancing performance and maintainability. 

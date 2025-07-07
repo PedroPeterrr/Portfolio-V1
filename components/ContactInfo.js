@@ -43,7 +43,7 @@ export default function ContactInfo() {
 
               <li className='contact-info-item'>
                 <div className="icon-border">
-                  <Image src={MailIcon} alt="Mail Icon" className='icons' />
+                  <Image src={PhoneIcon} alt="Phone Icon" className='icons' />
                 </div>
 
                 <div className='contact-info-text'>
@@ -54,7 +54,7 @@ export default function ContactInfo() {
                       target='_blank'
                       rel="noopener noreferrer"
                     >
-                      +63 917 123 4567
+                      +63 999 661 1881
                     </a>
                   </p>
                 </div>
@@ -63,7 +63,7 @@ export default function ContactInfo() {
 
               <li className='contact-info-item'>
                 <div className="icon-border">
-                  <Image src={PhoneIcon} alt="Phone Icon" className='icons' />
+                  <Image src={MailIcon} alt="Mail Icon" className='icons' />
                 </div>
 
                 <div className="contact-info-text">
