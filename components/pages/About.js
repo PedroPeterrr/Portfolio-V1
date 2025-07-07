@@ -4,7 +4,7 @@ import SkillLink from '../Reusabale/SkillLink';
 
 export default function About(){
     return(
-    <section className='about-me-section'>
+    <section>
         <header>
             <h2 className='title-header'>
             About Me
@@ -13,11 +13,9 @@ export default function About(){
 
         <div className='about-me-content'>
             <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-            </p>
+Front-end developer with a background in HTML5, CSS3, Tailwind, and Javascript. Having just graduated, I have achieved hands-on experience through my internship, with contributions made towards refactoring a web app, best practices on React components, as well as experience in handling RESTful APIs.</p>
             <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-            </p>
+I am committed to writing clean, accessible, and maintainable code. Through my internship, I have developed a strong collaborative skill and an eagerness to expand my technical and personal skills.</p>
         </div>
 
         <div className='skills-section'>
@@ -28,13 +26,13 @@ export default function About(){
 
             <div className="skills-icons-container">
                 <SkillLink type="react" />
-                <SkillLink type="next" />
                 <SkillLink type="js" />
                 <SkillLink type="mongodb" />
                 <SkillLink type="swagger" />
-                <SkillLink type="tailwind" />
                 <SkillLink type="postman" />
                 <SkillLink type="node" />
+                <SkillLink type="tailwind" />
+                <SkillLink type="next" />
            </div>
         </div>
     </section>

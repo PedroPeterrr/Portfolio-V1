@@ -30,10 +30,10 @@ body {
     font-family: var(--font-inter);
 }
 
-.main-container {
+main {
     @apply  flex flex-col gap-4
-    sm:m-5 
-    md:p-18 md:m-0 
+    m-5 mb-18
+    md:p-18 md:m-0 md:mb-0
     lg:justify-center lg:flex-row lg:gap-8;
 }
 
@@ -48,21 +48,27 @@ body {
     lg:text-[32px];
 }
 
-.main-content-card{
-    @apply bg-secondary border-2 border-border rounded-[25px] 
-    pt-8 px-8 pb-7  
 
+.main-content-card, .contact-content-card {
+    @apply bg-secondary border-2 border-border rounded-[25px] 
+}
+
+.main-content-card{
+    @apply 
+    pt-8 px-8 pb-7  
     w-full
+    lg:pb-5
     lg:w-[896px] 
     lg:min-h-[671px]
-    relative mb-15 md:mb-0;
+    relative md:mb-0
+    overflow-hidden;
 }
 
 /* Menu-bar Section */
 
 .menu-bar-container {
     @apply z-50     
-    border-border border-2 bg-white shadow-sm
+    border-border border-2 bg-[rgba(255,255,255,0.96)] shadow-sm
     w-full fixed bottom-0 left-0 
     rounded-t-[25px]
 
@@ -90,7 +96,6 @@ body {
 
 .contact-content-card {
     @apply  flex flex-col p-6 relative overflow-hidden
-    bg-secondary border-2 border-border rounded-[25px] 
     lg:h-[671px] lg:w-[274px] lg:pt-15 lg:pb-10
     lg:sticky lg:top-18;
 }
@@ -103,12 +108,12 @@ body {
 
 .name {
     @apply font-bold text-[14px] max-w-max mb-1
-    md:text-[15px];
+    md:text-[17px];
 }
 
 .title{
     @apply  bg-border max-w-max text-[12px] rounded-lg font-bold p-1 px-2 
-    md:text-[13px] lg:mx-auto;
+    md:text-[15px] lg:mx-auto;
 }
 
 .separator{
@@ -120,7 +125,7 @@ body {
 }
 
 .contact-info-item {
-    @apply flex items-center gap-2 text-sm font-light lg:my-0.5;
+    @apply flex items-center gap-2 text-[13px] font-light md:text-[14px] lg:my-0.5;
 }
 
 .contact-info-text{
@@ -157,11 +162,11 @@ body {
     @apply mb-[15px];
 }
 .about-me-content{
-    @apply text-sm font-light
+    @apply text-sm font-light lg:text-[15px]
 }
 
 .skills-icons-container {
-    @apply flex mt-4  space-x-1 overflow-x-auto 
+    @apply flex mt-4  space-x-1 overflow-y-hidden 
     lg:grid lg:grid-cols-4 lg:gap-5 lg:justify-items-center
     lg:overflow-visible lg:space-x-0 lg:mt-6;
 }
@@ -185,7 +190,7 @@ body {
 }
 
 .project-image-container {
-    @apply relative w-full aspect-video 
+    @apply relative w-full aspect-video
     transform transition duration-200 hover:scale-105
 }
 
@@ -200,11 +205,11 @@ body {
 }
 
 .resume-title {
-    @apply text-[18px] font-bold mb-5
+    @apply text-[18px] font-bold mb-5 md:text-[24px]
 }
 
 .experience-list {
-    @apply list-disc pl-5 text-[15px] font-light mt-2.5
+    @apply list-disc pl-5 text-[15px] font-light mt-2.5 md:text-[17px];
 }
 
 .experience-list li::marker {
@@ -220,10 +225,9 @@ body {
     border-2 border-border rounded-[12px] w-full p-2.5
     text-icon font-bold text-[16px] 
     shadow-sm
-    md:w-max md:px-10
+    md:w-max md:px-10  
+    hover:shadow-md hover:scale-102;
 }
-
-
 
 /* 2) Firefox support */
 * {
